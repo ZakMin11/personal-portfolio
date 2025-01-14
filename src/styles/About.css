@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+button:hover {
+    background-color: #6B8E75;
+  }
+  
+  .glow-effect {
+    animation: glow 2s infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 20px rgba(132, 169, 140, 1);
+    }
+    100% {
+      box-shadow: 0 0 0 rgba(132, 169, 140, 0);
+    }
+  }
+  @media (forced-colors: active) {
+    .force-colors {
+      -webkit-forced-color-adjust: none;
+      forced-color-adjust: none;
+    }
+  }
+
+  .high-contrast {
+    color: #000 !important;
+  }
+
+
+  .forced-colors {
+    -webkit-forced-color-adjust: none;
+    forced-color-adjust: none;
+  }
+  span{
+    color: inherit;
+  }
+ 
