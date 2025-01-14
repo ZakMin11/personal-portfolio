@@ -2,10 +2,11 @@ const projects = [
     {
       title: "IoT Thermostat",
       description: "A thermostat with mutliple probes that asynchronously displays real time temperature data that sends email alerts upon reaching a certain threshold.",
+      detailedDescription: "A thermostat with mutliple probes that asynchronously displays real time temperature data that sends email alerts upon reaching a certain threshold. The device is powered by an ESP32 microcontroller and uses websockets to communicate with a web server. The web server is hosted on a Raspberry Pi and uses a nodeJS backend to send email alerts. The device is powered by a 5V power supply and uses a 3.3V regulator to power the ESP32. The device is also equipped with a 3.5 inch touch screen display to display the temperature data.",
       technologies: ["ESP32", "C++", "JavaScript", "websockets"],
       link: "#",
       images: [],
-      videoLink: "https://youtube.com/shorts/1J9Z9Z9Z9Z9?feature=share"
+      videoLink: "https://youtube.com/embed/1J9Z9Z9Z9Z9?feature=share"
     },
     {
       title: "IPhone/remote controlled light switch",
@@ -13,7 +14,7 @@ const projects = [
       technologies: ["ATMega328p", "Assembly C", "Hardware Design", "IoT"],
       link: "#",
       images: [],
-      videoLink: "https://youtube.com/shorts/1J9Z9Z9Z9Z9?feature=share"
+      videoLink: "https://youtube.com/embed/1J9Z9Z9Z9Z9?feature=share"
     },
     {
       title: "Robotic Camera Man",
@@ -21,7 +22,7 @@ const projects = [
       technologies: ["Arduino", "openCV", "Python", "Serial Communication"],
       link: "#",
       images: ['src/assets/projectAssets/cambot/cambot.png'],
-      videoLink: "https://youtube.com/shorts/1J9Z9Z9Z9Z9?feature=share"
+      videoLink: "https://youtube.com/embed/1J9Z9Z9Z9Z9?feature=share"
     },
     {
       title: "Annoy Zak Bot",
@@ -29,7 +30,7 @@ const projects = [
       technologies: ["JavaScript", "Python", "websockets", "Raspberry Pi", "Arduino", "nodeJS"],
       link: "#",
       images: ['https://github.com/ZakMin11/Taxi-Data-Collection-Automation'],
-      videoLink: "https://youtube.com/shorts/1J9Z9Z9Z9Z9?feature=share"
+      videoLink: "https://youtube.com/embed/1J9Z9Z9Z9Z9?feature=share"
     },
     {
       title: "Ninja Cube",
@@ -37,15 +38,15 @@ const projects = [
       technologies: ["C#", "Unity"],
       link: "#",
       images: ['src/assets/projectAssets/ninjaCube/ninjaCube.png'],
-      videoLink: "https://youtube.com/shorts/1J9Z9Z9Z9Z9?feature=share"
+      videoLink: "https://youtube.com/embed/1J9Z9Z9Z9Z9?feature=share"
     },
     {
       title: "Custom Electric Longboard battery pack",
       description: "A custom battery pack for an Evolve electric longboard that uses 18650 cells configured to existing battery management system (BMS).",
       technologies: ["Battery Design", "Circuit Analysis", "Voltage/Current Calculations", "BMS integration"],
-      link: "https://youtube.com/shorts/wP0nA2YVpxA?feature=share",
-      images: [],
-      videoLink: "https://youtube.com/shorts/1J9Z9Z9Z9Z9?feature=share"
+      link: "",
+      images: ["src/assets/projectAssets/customBattery/midSoder.jpg", "src/assets/projectAssets/customBattery/battery.JPG"],
+      videoLink: "https://youtube.com/embed/wP0nA2YVpxA"
     },
     {
       title: "Datamosher",
@@ -53,16 +54,16 @@ const projects = [
       technologies: ["Python", "ffmpeg"],
       link: "#",
       images: [],
-      videoLink: "https://youtube.com/shorts/1J9Z9Z9Z9Z9?feature=share"
+      videoLink: "https://youtube.com/embed/1J9Z9Z9Z9Z9?feature=share"
     },
     
     {
       title: "Staring Contest Robot",
       description: "A robot that plays a staring contest with you, if you lose, you get shot with a nerf gun",
       technologies: ["Arduino", "OpenCV", "Python", "Serial Communication"],
-      link: "https://youtube.com/shorts/KwcwHzdf0r0?feature=share",
+      link: "https://www.youtube.com/embed/KwcwHzdf0r0",
       images: [],
-      videoLink: "https://youtube.com/shorts/1J9Z9Z9Z9Z9?feature=share"
+      videoLink: "https://www.youtube.com/embed/KwcwHzdf0r0"
     },
     
     

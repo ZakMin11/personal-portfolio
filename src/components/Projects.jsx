@@ -1,21 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import projects from '../data/projects';
 import '../styles/Projects.css'; // Import the CSS file
+import ExpandedProject from './ExpandedProject';
 
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null);
   const [isProjectsExpanded, setIsProjectsExpanded] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const projectsRef = useRef(null);
 
   const toggleExpandProject = (index) => {
-    setExpandedProject(expandedProject === index ? null : index);
+    if (expandedProject === index) {
+      setExpandedProject(null);
+    } else {
+      setScrollPosition(window.scrollY);
+      setExpandedProject(index);
+    }
   };
 
   const toggleProjectsSection = () => {
     setIsProjectsExpanded(!isProjectsExpanded);
   };
 
+  const closeExpandedProject = () => {
+    setExpandedProject(null);
+  };
+
+  useEffect(() => {
+    if (expandedProject !== null && projectsRef.current) {
+      projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    }
+  }, [expandedProject]);
+
   return (
-    <section id="projects" className="py-20 bg-background font-manrope">
+    <section id="projects" className="py-20 bg-background font-manrope" ref={projectsRef}>
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-text mb-12">Projects</h2>
         <div className="bg-secondary rounded-lg shadow-md p-6 relative">
@@ -62,7 +82,7 @@ const Projects = () => {
             <div className="gradient-overlay flex justify-center items-center">
               <button
                 onClick={toggleProjectsSection}
-                className="text-text hover:text-accent mb-4"
+                className="text-text bg-accent-light rounded-full px-3 py-2 hover:bg-accent-dark glow-effect hover:text-accent mb-4"
               >
                 Show Projects
               </button>
@@ -70,6 +90,12 @@ const Projects = () => {
           )}
         </div>
       </div>
+      {expandedProject !== null && (
+        <ExpandedProject
+          project={projects[expandedProject]}
+          onClose={closeExpandedProject}
+        />
+      )}
     </section>
   );
 };

@@ -6,8 +6,9 @@ import Experiences from '../components/Experiences';
 import Hero from '../components/Hero';
 import Contact from '../components/Contact';
 import AnimateOnScroll from '../components/AnimateOnScroll';
-import About from '../components/About';
 import Certifications from '../components/Certifications';
+import About from '../components/About';
+
 
 const Portfolio = () => {
   const [showHeader, setShowHeader] = useState(false);

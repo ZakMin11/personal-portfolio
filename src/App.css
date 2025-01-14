@@ -26,3 +26,6 @@ body {
          after:transition-all after:duration-200 
          hover:after:w-full;
 }
+.no-scroll {
+  overflow: hidden;
+}

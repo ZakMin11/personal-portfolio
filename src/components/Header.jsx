@@ -1,22 +1,28 @@
+// filepath: /Users/zakmineiko/school/personalWebsite/zakPortfolio/src/components/Header.jsx
 import React from 'react';
 
 const Header = () => {
   return (
-    <nav className="bg-primary shadow-lg fixed top-0 left-0 w-full z-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center h-24"> {/* Adjusted height */}
-          <h1 className="text-lg font-bold text-card text-text">Zak Mineiko</h1> {/* Adjusted font size */}
-          <div className="flex space-x-4">
-            <a href="#hero" className="text-card hover:text-accent text-sm">Home</a>
-            <a href="#projects" className="text-card hover:text-accent text-sm">Projects</a>
-            <a href="#experience" className="text-card hover:text-accent text-sm">Experience</a>
-            <a href="#Certifications" className="text-card hover:text-accent text-sm">Extras</a>
-            <a href="#environment" className="text-card hover:text-accent text-sm">Technologies</a>
-            <a href="#contact" className="text-card hover:text-accent text-sm">Contact</a>
-          </div>
-        </div>
+    <header className="bg-gradient-to-b from-accent to-background shadow-lg fixed top-0 left-0 w-full z-50 px-4 py-2">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="text-white text-2xl md:text-3xl font-bold">Zak Mineiko</h1>
       </div>
-    </nav>
+      <div className="max-w-6xl mx-auto mt-2">
+        <ul className="flex justify-around items-center text-white text-sm md:text-base">
+          <li className="px-2"><a href="#about" className="hover:text-yellow-300 transition duration-300">About</a></li>
+          <li className="border-l border-white h-6"></li>
+          <li className="px-2"><a href="#projects" className="hover:text-yellow-300 transition duration-300">Projects</a></li>
+          <li className="border-l border-white h-6"></li>
+          <li className="px-2"><a href="#experience" className="hover:text-yellow-300 transition duration-300">Experience</a></li>
+          <li className="border-l border-white h-6"></li>
+          <li className="px-2"><a href="#certifications" className="hover:text-yellow-300 transition duration-300">Extras</a></li>
+          <li className="border-l border-white h-6"></li>
+          <li className="px-2"><a href="#environment" className="hover:text-yellow-300 transition duration-300">Environment</a></li>
+          <li className="border-l border-white h-6"></li>
+          <li className="px-2"><a href="#contact" className="hover:text-yellow-300 transition duration-300">Contact</a></li>
+        </ul>
+      </div>
+    </header>
   );
 };
 

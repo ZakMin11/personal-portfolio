@@ -48,7 +48,7 @@ const useElementOnScreen = (options: Options): [React.RefObject<HTMLDivElement>,
 };
 
 
-const AnimateOnScroll = ({ children, reappear, threshold = 0.5 }: Props) => {
+const AnimateOnScroll = ({ children, reappear, threshold = 0.2 }: Props) => {
   const [containerRef, isVisible] = useElementOnScreen({
     threshold: threshold,
     reappear: reappear,

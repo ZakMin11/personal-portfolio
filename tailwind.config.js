@@ -28,7 +28,8 @@ export default {
           dark: '#E7F6F2',
         },
 	      background: '#1A1A1A',  // Almost black
-	      highlight: '#FFFFFF'    // White
+	      highlight: '#FFFFFF',    // White
+        iowa: '#FFCD00'         // Iowa gold
       },
     },
   },
