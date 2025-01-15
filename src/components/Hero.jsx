@@ -29,10 +29,10 @@ const Hero = () => {
               <FaEnvelope className="mr-2" /> zmineiko@gmail.com
             </p>
             <p className="text-xl text-text flex items-center justify-center md:justify-end">
-              <FaLinkedin className="mr-2" /> <a href="https://linkedin.com/in/zakmineiko" className="hover:text-accent">LinkedIn</a>
+              <FaLinkedin className="mr-2" /> <a href="https://www.linkedin.com/in/zak-mineiko-3b154b1a9/" target="_blank" rel="noopener noreferrer" className="hover:text-accent">LinkedIn</a>
             </p>
             <p className="text-xl text-text flex items-center justify-center md:justify-end">
-              <FaGithub className="mr-2" /> <a href="https://github.com/zakmin11" className="hover:text-accent">GitHub</a>
+              <FaGithub className="mr-2" /> <a href="https://github.com/zakmin11" target="_blank" rel="noopener noreferrer" className="hover:text-accent">GitHub</a>
             </p>
           </div>
         </div>

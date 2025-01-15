@@ -6,9 +6,8 @@ const environments = {
     editors: ["Vim", "VSCode", "Sublime Text", "IntelliJ", "Replit", "CLion", "Visual Studio", "Eclipse", "xCode", "Android Studio", "Arduino IDE", "Atmel Studio"],
     version_control: ["Git", "GitHub", "GitLab"],
     cli: ["Bash", "Zsh", "PowerShell"],
-    languages: ["Java", "C","Embedded C", "C++", "C#", "Python", "HTML/CSS/JS/PHP", "Node JS", "React JS", "Express", "MySQL", "Julia", "Atmel AVR", "Processing.JS", "MATLAB", "Adobe ExtendScript", "Swift"],
-    libraries: ["React", "Redux", "Tailwind CSS", "Bootstrap", "jQuery"],
-    softwares: ["VMWare Fusion","MicroCap Spice", "Fusion 360", "Wine", "Wireshark", "Adobe After Effects", "Premiere Pro", "Slack", "Termius", "PingPlotter", "MySQLWorkbench", "Microsoft Suite", "Adobe Suite", "GIMP", "eraser.io"]
+    languages: ["Java", "C","Embedded C", "C++", "C#", "Python", "HTML/CSS/JS/PHP", "Node JS", "React JS", "Next JS", "Express", "MySQL", "Julia", "Atmel AVR", "Processing.JS", "MATLAB", "Adobe ExtendScript", "Swift", "Bootstrap 5", "TailwindCSS"],
+    softwares: ["VMWare Fusion","MicroCap Spice", "Fusion 360", "Wine", "Wireshark", "Adobe After Effects", "Premiere Pro", "Slack", "Termius", "PingPlotter", "MySQLWorkbench", "Microsoft Suite", "Adobe Suite", "GIMP", "eraser.io", "Firebase", "Clerk"]
   }
 };
 
@@ -54,7 +53,7 @@ const EnvironmentSection = () => {
 
             {/* Languages Tile */}
             <div className="bg-primary rounded-lg shadow-md p-8">
-              <h3 className="text-2xl font-semibold text-text mb-6">Languages</h3>
+              <h3 className="text-2xl font-semibold text-text mb-6">Languages/Frameworks</h3>
               <div className="flex flex-wrap gap-2">
                 {environments.current.languages.map((language, index) => (
                   <span key={index} className="bg-accent text-text px-3 py-1 rounded-full text-sm font-fira-code">
@@ -99,20 +98,6 @@ const EnvironmentSection = () => {
                 ))}
               </div>
             </div>
-
-            {/* Libraries Tile */}
-            <div className="bg-primary rounded-lg shadow-md p-8">
-              <h3 className="text-2xl font-semibold text-text mb-6">Libraries</h3>
-              <div className="flex flex-wrap gap-2">
-                {environments.current.libraries.map((library, index) => (
-                  <span key={index} className="bg-accent text-text px-3 py-1 rounded-full text-sm font-fira-code">
-                    {library}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            
           </div>
         </div>
       </div>

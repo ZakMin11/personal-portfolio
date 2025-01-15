@@ -36,11 +36,6 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="flex justify-center mt-8">
-            <button className="bg-accent text-text dark:text-text-dark px-4 py-2 rounded-full hover:bg-accent-dark glow-effect font-fira-code">
-              Cool Stuff
-            </button>
-          </div>
         </div>
       </div>
     </section>
