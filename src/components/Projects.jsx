@@ -28,7 +28,7 @@ const Projects = () => {
 
   useEffect(() => {
     if (expandedProject !== null && projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else {
       window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
     }

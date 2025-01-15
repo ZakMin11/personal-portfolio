@@ -1,4 +1,3 @@
-// filepath: /Users/zakmineiko/school/personalWebsite/zakPortfolio/src/components/Modal.jsx
 import React, { useEffect } from 'react';
 
 const Modal = ({ show, onClose, children }) => {
@@ -23,8 +22,8 @@ const Modal = ({ show, onClose, children }) => {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center z-50 pb-16">
-      <div className="bg-background dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl max-w-3xl w-full max-h-screen">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="bg-background dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl max-w-3xl w-full max-h-[90vh]">
         <div className="flex justify-end p-2 bg-background">
           <button onClick={onClose} className="bg-accent rounded-full px-3 py-1 text-black dark:text-white hover:bg-accent-dark">
             Close
