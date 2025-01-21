@@ -3,7 +3,7 @@ import { FaApple, FaLinux, FaWindows } from "react-icons/fa";
 
 const environments = {
   current: {
-    editors: ["Vim", "VSCode", "Sublime Text", "IntelliJ", "Replit", "CLion", "Visual Studio", "Eclipse", "xCode", "Android Studio", "Arduino IDE", "Atmel Studio"],
+    editors: ["Vim", "VSCode", "Sublime Text", "IntelliJ", "Replit", "CLion", "Visual Studio", "Eclipse", "xCode", "Android Studio", "Arduino IDE", "Atmel Studio", "Brackets"],
     version_control: ["Git", "GitHub", "GitLab"],
     cli: ["Bash", "Zsh", "PowerShell"],
     languages: ["Java", "C","Embedded C", "C++", "C#", "Python", "HTML/CSS/JS/PHP", "Node JS", "React JS", "Next JS", "Express", "MySQL", "Julia", "Atmel AVR", "Processing.JS", "MATLAB", "Adobe ExtendScript", "Swift", "Bootstrap 5", "TailwindCSS"],

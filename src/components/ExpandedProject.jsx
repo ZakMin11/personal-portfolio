@@ -1,12 +1,13 @@
-// filepath: /Users/zakmineiko/school/personalWebsite/zakPortfolio/src/components/ExpandedProject.jsx
 import React from 'react';
 import { FaGithub } from "react-icons/fa";
-import Modal from './Modal';
 
 const ExpandedProject = ({ project, onClose }) => {
   return (
-    <Modal show={true} onClose={onClose}>
-      <div className="bg-background rounded-lg shadow-md p-6 max-w-4xl w-full relative overflow-auto max-h-screen">
+    <div className="bg-secondary rounded-lg shadow-md p-6 max-w-4xl w-full relative overflow-auto max-h-screen mx-auto">
+      <button onClick={onClose} className="absolute top-4 right-4 bg-accent text-text px-3 py-1 rounded-full hover:bg-accent-dark">
+        Close
+      </button>
+      <div className="text-center">
         <h3 className="text-2xl font-semibold mb-4 text-text">{project.title}</h3>
         {project.detailedDescription && (
           <p className="text-text mb-4">{project.detailedDescription}</p>
@@ -29,30 +30,33 @@ const ExpandedProject = ({ project, onClose }) => {
             ></iframe>
           </div>
         )}
-        {project.githubLink && (
+        {project.link && (
           <div className="mb-4">
             <a
-              href={project.githubLink}
+              href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:underline"
+              
+              className="bg-accent px-4 py-2 rounded-full text-text hover:underline flex items-center justify-center font-fira-code"
             >
-              <FaGithub /> View on GitHub
+              <FaGithub className="mr-2" /> View on GitHub
             </a>
           </div>
         )}
         {project.technologies && project.technologies.length > 0 && (
-          <div className="mb-4">
-            <h4 className="text-xl font-semibold mb-2 text-text">Technologies Used:</h4>
-            <ul className="list-disc list-inside text-text">
-              {project.technologies.map((tech, i) => (
-                <li key={i}>{tech}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+  <div className="mb-4">
+    <h4 className="text-xl font-semibold mb-2 text-text">Technologies Used:</h4>
+    <div className="flex flex-wrap gap-2 mb-4 justify-center">
+      {project.technologies.map((tech, i) => (
+        <span key={i} className="bg-accent px-3 py-1 rounded-full text-sm text-text font-fira-code m-1">
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
+)}
       </div>
-    </Modal>
+    </div>
   );
 };
 

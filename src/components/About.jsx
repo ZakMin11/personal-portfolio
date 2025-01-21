@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/About.css'; // Import the CSS file
 
 const About = () => {
-  const hobbies = ["Traveling", "Hiking", "Gaming", "CAD", "Chess", "3D Printing", "Cooking", "Mountian Biking", "Snowboarding", "Video Editing", "Fishing", "Photography", "Music", "Lifting", "Running", "Helping my grandma <3"];
+  const hobbies = ["Traveling", "Hiking", "Gaming", "CAD", "Chess", "3D Printing", "Cooking", "Mountian Biking", "Snowboarding", "Video Editing", "Fishing", "Photography", "Music", "Lifting", "Running", "Ping Pong", "Helping grandma <3"];
   const interests = ["DevOps", "AI", "Robotics", "IoT", "Machine Learning", "Cloud Computing", "Cybersecurity", "Hardware","Firmware", "Web Development"];
 
   return (
