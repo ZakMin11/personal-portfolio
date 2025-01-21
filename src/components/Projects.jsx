@@ -49,7 +49,7 @@ const Projects = () => {
         {expandedProject === null ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <div key={index} className="bg-secondary rounded-lg shadow-md p-6 flex flex-col justify-between">
+              <div key={index} className="bg-secondary rounded-lg shadow-md p-6 flex flex-col">
                 <h3 className="text-xl font-semibold mb-2 text-text text-center">{project.title}</h3>
                 <hr className="border-t border-accent my-2" />
                 <p className="text-text mb-4">{project.description}</p>
@@ -60,7 +60,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-center mt-4">
+                <div className="mt-auto flex justify-center">
                   <button
                     onClick={() => toggleExpandProject(index)}
                     className="bg-accent text-text px-4 py-2 rounded-full hover:bg-accent-dark transition duration-300"
