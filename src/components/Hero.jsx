@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import Modal from './Modal';
-
+import headshot from '../assets/headshot/headshot-green.png';
+import resume from '../assets/resume/2024FallResumeTimesGO.pdf';
 
 const Hero = () => {
   const [showResume, setShowResume] = useState(false);
@@ -11,7 +12,7 @@ const Hero = () => {
     <section id="hero" className="py-20 bg-secondary font-manrope relative">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-center md:space-x-8 md:space-y-0 mb-8">
-          <img src="src/assets/headshot/headshot-green.png" alt="Zak Mineiko" className="rounded-full w-32 h-32 object-cover" />
+          <img src={headshot} alt="Zak Mineiko" className="rounded-full w-32 h-32 object-cover" />
           <div className="text-center md:text-left">
             <h1 className="text-4xl font-bold text-text mb-2">Zak Mineiko</h1>
             <p className="text-xl text-text flex items-center justify-center md:justify-start">
@@ -69,7 +70,7 @@ const Hero = () => {
       </div>
       <Modal show={showResume} onClose={() => setShowResume(false)}>
         <iframe
-          src="src/assets/resume/2024FallResumeTimesGO.pdf"
+          src={resume}
           width="100%"
           height="650px"
           

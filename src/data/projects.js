@@ -1,3 +1,14 @@
+import therm1 from '../assets/projectAssets/thermostat/front.jpg';
+import therm2 from '../assets/projectAssets/thermostat/inside.JPG';
+import ir1 from '../assets/projectAssets/irReceiver/circuit.jpg';
+import ir2 from '../assets/projectAssets/irReceiver/pcb.png';
+import lightS from '../assets/projectAssets/IRSwitch/irswitch.png';
+import camMan from '../assets/projectAssets/cambot/cambot.png';
+import LB1 from "../assets/projectAssets/customBattery/midSoder.jpg"; 
+import LB2 from "../assets/projectAssets/customBattery/battery.JPG";
+import NC1 from '../assets/projectAssets/ninjaCube/ninjaCube.png';
+import NC2 from '../assets/projectAssets/ninjaCube/ninja2.png';
+
 const projects = [
     {
       title: "IoT Thermostat",
@@ -6,7 +17,7 @@ const projects = [
       detailedDescription: "An IoT thermostat with multiple probes that asynchronously displays real time temperature data that sends email alerts upon reaching a certain threshold. The device is powered by an ESP32 microcontroller and uses websockets to communicate with a web server. The web server is hosted on a Raspberry Pi and uses a nodeJS backend to send email alerts. The device is powered by a 5V power supply and uses a 3.3V regulator to power the ESP32. The device is also equipped with buttons to toggle sensors, a screen to display the temperature data, and a power switch. Please check out the lab report for a more detailed explanation of the project: https://teamadmin.io/",
       technologies: ["ESP32", "C++", "JavaScript", "websockets"],
       link: "",
-      images: ['src/assets/projectAssets/thermostat/front.jpg', 'src/assets/projectAssets/thermostat/inside.JPG'],
+      images: [therm1, therm2],
       videoLink: ""
     },
     {
@@ -16,7 +27,7 @@ const projects = [
       detailedDescription: "During the first half of my Senior Design coursework at the University of Iowa, my senior design team and I developed a sophisticated safety system that combines analog circuit design with digital signal processing. The system utilizes an IR photodiode receiver (OP598A) optimized for 940nm wavelength detection, coupled with a multi-stage signal processing circuit. The design implements a non-inverting pre-amplifier with 9.2x gain, followed by a 2nd-order multi-feedback bandpass filter centered at 421Hz with a 42.1Hz bandwidth, effectively attenuating 92% of 120Hz noise. The processed signal interfaces with an ESP32 microcontroller through a voltage divider network, where a 6th-order Chebyshev digital filter provides additional signal conditioning. The system features real-time safety monitoring with automated text message alerts through IFTTT webhooks when beam interruption is detected, demonstrating my ability in analog circuit design, digital signal processing, and IoT integration. Please see our senior design report for a more detailed explanation of the project: https://teamadmin.io/",
       technologies: ["ESP32", "PCD Design", "Circuit Analysis", "Signal Processing", "C/C++", "Sample Hysteresis", "CAD"],
       link: "",
-      images: ['src/assets/projectAssets/irReceiver/circuit.jpg','src/assets/projectAssets/irReceiver/pcb.png'],
+      images: [ir1, ir2],
       videoLink: ""
     },
     {
@@ -26,7 +37,7 @@ const projects = [
       detailedDescription: "During my embedded systems coursework at the University of Iowa, Dawson Crowley and I developed a remote-controlled light switch automation system that allows users to control standard household light switches using any IR remote control. The project combines an Arduino Nano (ATMega328p) microcontroller with a KSOP4838 IR sensor and SG90 servo motor to create a non-destructive, easily installable solution. Using C programming, I implemented precise PWM control for the servo motor and robust IR signal processing that works reliably up to 20 feet away. The system features custom mounting hardware that attaches via Command Strips, making it an apartment-friendly solution that requires no permanent modifications. The device includes visual feedback through an LED indicator and is powered by a standard 9V battery. This project demonstrated my skills in embedded systems programming, signal processing, and mechanical design while solving a practical everyday problem.",
       technologies: ["ATMega328p", "Assembly C", "Hardware Design", "IoT"],
       link: "https://github.com/ZakMin11/IR-Sensing-Light-Switch",
-      images: ['src/assets/projectAssets/IRSwitch/irswitch.png'],
+      images: [lightS],
       videoLink: ""
     },
     {
@@ -36,7 +47,7 @@ const projects = [
       detailedDescription: "This system uses OpenCV to detect and track colored objects in real-time video feed. Based on the object's position, it sends commands to an Arduino-controlled servo motor to adjust the camera's position, creating a smooth tracking effect.",
       technologies: ["Arduino", "openCV", "Python", "Serial Communication"],
       link: "https://github.com/ZakMin11/Automatic-Camera-Man",
-      images: ['src/assets/projectAssets/cambot/cambot.png'],
+      images: [camMan],
       videoLink: "https://www.youtube.com/embed/M_mp4P83bNM?si=phzcP0uIysS4JdgR"
     },
     {
@@ -65,7 +76,7 @@ const projects = [
       description: "A custom battery pack for an Evolve electric longboard that uses 18650 cells configured to existing battery management system (BMS).",
       technologies: ["Battery Design", "Circuit Analysis", "Voltage/Current Calculations", "BMS integration"],
       link: "",
-      images: ["src/assets/projectAssets/customBattery/midSoder.jpg", "src/assets/projectAssets/customBattery/battery.JPG"],
+      images: [LB1,LB2],
       videoLink: "https://youtube.com/embed/wP0nA2YVpxA"
     },
     {
@@ -74,7 +85,7 @@ const projects = [
       description: "A 3D third person parkour/shooter game. Using unique motion controls, players must dodge projectiles advancing through levels via parkour.",
       technologies: ["C#", "Unity"],
       link: "",
-      images: ['src/assets/projectAssets/ninjaCube/ninjaCube.png', 'src/assets/projectAssets/ninjaCube/ninja2.png'],
+      images: [NC1, NC2],
       videoLink: ""
     },
     {

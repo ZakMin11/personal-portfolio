@@ -1,3 +1,4 @@
+import alleyImage from "../assets/work/mechanic.JPG";
 const experiences = [
     {
       company: "Outsider",
@@ -49,7 +50,7 @@ const experiences = [
       images: [
         {
           alt: "Bowling Alley Mechanic",
-          src: "src/assets/work/mechanic.JPG"
+          src: alleyImage 
         }
       ] 
     }
