@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import Modal from './Modal';
 import headshot from '../assets/headshot/headshot-green.png';
-import resume from '../assets/resume/2024FallResumeTimesGO.pdf';
 
 const Hero = () => {
   const [showResume, setShowResume] = useState(false);
@@ -53,7 +52,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-0 left-0 w-full">
         <nav className="px-4 py-2">
-          <ul className="flex justify-around items-center text-accent text-sm md:text-base">
+          <ul className="flex justify-around items-center text-accent text-sm md:text-base navbar-small-screen">
             <li className="px-2"><a href="#about" className="hover:text-text">About</a></li>
             <li className="border-l border-text h-6"></li>
             <li className="px-2"><a href="#projects" className="hover:text-text">Projects</a></li>
@@ -70,7 +69,7 @@ const Hero = () => {
       </div>
       <Modal show={showResume} onClose={() => setShowResume(false)}>
         <iframe
-          src={resume}
+          src="src/assets/resume/2024FallResumeTimesGO.pdf"
           width="100%"
           height="650px"
           

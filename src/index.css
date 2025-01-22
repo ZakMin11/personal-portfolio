@@ -28,3 +28,8 @@ html {
 .no-scroll {
   overflow: hidden;
 }
+@media (max-width: 450px) {
+  .navbar-small-screen {
+    font-size: 0.7rem; /* Adjust the size as needed */
+  }
+}
