@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import Modal from './Modal';
 import headshot from '../assets/headshot/headshot-green.png';
+import resume from "../assets/resume/2024FallResumeTimesGO.pdf";
 
 const Hero = () => {
   const [showResume, setShowResume] = useState(false);
@@ -69,7 +70,7 @@ const Hero = () => {
       </div>
       <Modal show={showResume} onClose={() => setShowResume(false)}>
         <iframe
-          src="src/assets/resume/2024FallResumeTimesGO.pdf"
+          src={resume}
           width="100%"
           height="650px"
           
