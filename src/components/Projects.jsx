@@ -39,7 +39,7 @@ const Projects = () => {
               <button
                 key={filter}
                 onClick={() => handleFilterChange(filter)}
-                className={`px-4 py-2 mx-1 rounded-full ${selectedFilter === filter ? 'bg-accent text-text' : 'bg-secondary text-text'}`}
+                className={`px-4 py-2 mx-0 text-sm sm:text-md  sm:mx-1 rounded-full ${selectedFilter === filter ? 'bg-accent text-text' : 'bg-secondary text-text'}`}
               >
                 {filter}
               </button>

@@ -19,7 +19,7 @@ const Hero = () => {
               <FaSchool className="mr-2" /> University of Iowa
             </p>
             <p className="text-xl text-text flex items-center justify-center md:justify-start">
-              <FaGraduationCap className="mr-2" /> Computer Science and Engineering
+              <FaGraduationCap className="mr-2" />Electrical Engineering and Computer Science 
             </p>
           </div>
           <div className="text-center md:text-right space-y-4">
