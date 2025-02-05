@@ -29,7 +29,9 @@ export default {
         },
 	      background: '#1A1A1A',  // Almost black
 	      highlight: '#FFFFFF',    // White
+        darkerText: '#B7C3C0',
         iowa: '#FFCD00'         // Iowa gold
+
       },
     },
   },

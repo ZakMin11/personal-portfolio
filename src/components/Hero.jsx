@@ -1,6 +1,6 @@
 // filepath: /Users/zakmineiko/school/personalWebsite/zakPortfolio/src/components/Hero.jsx
 import React, { useState } from 'react';
-import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaClock } from "react-icons/fa";
 import Modal from './Modal';
 import headshot from '../assets/headshot/headshot-green.png';
 import resume from "../assets/resume/2024FallResumeTimesGO.pdf";
@@ -18,11 +18,17 @@ const Hero = () => {
             <p className="text-xl text-text flex items-center justify-center md:justify-start">
               <FaSchool className="mr-2" /> University of Iowa
             </p>
+            <p className="text-xl flex items-center text-text justify-center md:justify-start">
+              <FaGraduationCap className="text-text mr-2" />  
+              Electrical Engineering          
+            </p>
+            <div className="text-sm text-darkerText -mt-1 ">Computer Science Focus</div>
             <p className="text-xl text-text flex items-center justify-center md:justify-start">
-              <FaGraduationCap className="mr-2" />Electrical Engineering and Computer Science 
+              <FaClock className="mr-2" /> Expected Graduation: May 2025
             </p>
           </div>
-          <div className="text-center md:text-right space-y-4">
+          
+          <div className="text-center md:text-right space-y-2">
             <p className="text-xl text-text flex items-center justify-center md:justify-end">
               <FaPhone className="mr-2" /> (708) 321-0211
             </p>
