@@ -83,7 +83,8 @@ const projects = [
       title: "Ninja Cube",
       type: ["Software"],
       description: "A 3D third person parkour/shooter game. Using unique motion controls, players must dodge projectiles advancing through levels via parkour.",
-      technologies: ["C#", "Unity"],
+      detailedDescription: "Project from one week coding competition at the end of Illinois Institute of Technology Summer Coding Camp which finished as the runner up. The game is a 3D third-person parkour/shooter game. Using unique motion controls, players must dodge projectiles while advancing through levels via parkour. The game was developed in Unity using C# and features a variety of levels, each with its own unique challenges and obstacles. Each level was designed in Blender. The game also includes a scoring system that rewards players for completing levels quickly and efficiently.",
+      technologies: ["C#", "Unity", "Blender"],
       link: "",
       images: [NC1, NC2],
       videoLink: ""
