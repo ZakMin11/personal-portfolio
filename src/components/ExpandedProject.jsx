@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub } from "react-icons/fa";
 
+
 const ExpandedProject = ({ project, onClose }) => {
   return (
     <div className="bg-secondary rounded-lg shadow-md p-6 max-w-4xl w-full relative overflow-auto max-h-screen mx-auto">

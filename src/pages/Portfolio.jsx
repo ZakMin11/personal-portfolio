@@ -44,6 +44,13 @@ const Portfolio = () => {
         </section>
       </AnimateOnScroll>
 
+      {/* Experience Section */}
+      <AnimateOnScroll>
+        <section id="experience">
+            <Experiences />
+        </section>
+      </AnimateOnScroll>
+      
       {/* Projects Section */}
       <AnimateOnScroll>
         <section id="projects">
@@ -51,12 +58,7 @@ const Portfolio = () => {
         </section>
       </AnimateOnScroll>
 
-      {/* Experience Section */}
-      <AnimateOnScroll>
-        <section id="experience">
-            <Experiences />
-        </section>
-      </AnimateOnScroll>
+      
 
       {/* Certifications Section */}
       <AnimateOnScroll>
