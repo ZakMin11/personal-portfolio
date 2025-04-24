@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import projects from '../data/projects';
 import ExpandedProject from './ExpandedProject';
+import '../styles/About.css';
+
 
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null);
@@ -39,7 +41,7 @@ const Projects = () => {
               <button
                 key={filter}
                 onClick={() => handleFilterChange(filter)}
-                className={`px-4 py-2 mx-0 text-sm sm:text-md  sm:mx-1 rounded-full ${selectedFilter === filter ? 'bg-accent text-text' : 'bg-secondary text-text'}`}
+                className={`px-4 py-2 mx-0 text-sm sm:text-md  sm:mx-1 glow-effect rounded-full ${selectedFilter === filter ? 'bg-accent text-text' : 'bg-secondary text-text'}`}
               >
                 {filter}
               </button>
@@ -63,7 +65,7 @@ const Projects = () => {
                 <div className="mt-auto flex justify-center">
                   <button
                     onClick={() => toggleExpandProject(index)}
-                    className="bg-accent text-text px-4 py-2 rounded-full hover:bg-accent-dark transition duration-300"
+                    className="bg-accent glow-effect text-text px-4 py-2 rounded-full hover:bg-accent-dark transition duration-300"
                   >
                     Show More
                   </button>

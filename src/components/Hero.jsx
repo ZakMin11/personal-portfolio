@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaClock } from "react-icons/fa";
 import Modal from './Modal';
 import headshot from '../assets/headshot/headshot-green.png';
-import resume from "../assets/resume/2024FallResumeTimesGO.pdf";
+import resume from "../assets/resume/2025SpringResume.pdf";
+import '../styles/About.css';
 
 const Hero = () => {
   const [showResume, setShowResume] = useState(false);
@@ -22,7 +23,11 @@ const Hero = () => {
               <FaGraduationCap className="text-text mr-2" />  
               Electrical Engineering          
             </p>
-            <div className="text-sm text-darkerText -mt-1 ">Computer Science Focus</div>
+            <p className="text-sm flex items-center text-darkerText justify-center md:justify-start">
+              <FaGraduationCap className=" invisible text-xl  mr-2" />  
+              Computer Science Focus
+            </p>
+            
             <p className="text-xl text-text flex items-center justify-center md:justify-start">
               <FaClock className="mr-2" /> Expected Graduation: May 2025
             </p>
@@ -75,13 +80,14 @@ const Hero = () => {
         </nav>
       </div>
       <Modal show={showResume} onClose={() => setShowResume(false)}>
-        <iframe
-          src={resume}
-          width="100%"
-          height="650px"
-          
-          title="Resume"
-        ></iframe>
+        <div className="w-full h-full">
+          <iframe
+            src={resume}
+            className="w-full h-full"
+            style={{ border: "none"}}
+            title="Resume"
+          ></iframe>
+        </div>
       </Modal>
     </section>
   );

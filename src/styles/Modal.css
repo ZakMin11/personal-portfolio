@@ -1,0 +1,15 @@
+@keyframes pulse-red-green {
+    0% {
+      background-color: accent; /* Green */
+    }
+    50% {
+      background-color: #ff0000; /* Red */
+    }
+    100% {
+      background-color: accent; /* Green */
+    }
+  }
+  
+  .animate-pulse-red-green {
+    animation: pulse-red-green 10s cubic-bezier(0.65, 0.05, 0.36, 1) infinite; /* 2 seconds for a smooth transition */
+  }

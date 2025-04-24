@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import experiences from '../data/experiences';
-
+import '../styles/About.css';
 const Experiences = () => {
   const [expandedExperience, setExpandedExperience] = useState(null);
   const [hoverTimeout, setHoverTimeout] = useState(null);
@@ -31,7 +31,7 @@ const Experiences = () => {
         <div className="relative mb-8">
           <button
             onClick={toggleExpandAll}
-            className="absolute left-0 bg-accent text-text px-3 py-1 rounded-full hover:bg-accent-dark"
+            className="absolute left-0 bg-accent text-text px-3 py-1 rounded-full hover:bg-accent-dark glow-effect"
           >
             {expandAll ? 'Collapse All' : 'Expand All'}
           </button>
