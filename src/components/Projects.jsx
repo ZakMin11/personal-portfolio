@@ -36,12 +36,12 @@ const Projects = () => {
           <h2 className="text-3xl font-bold text-center text-text">Projects</h2>
         </div>
         {expandedProject === null && (
-          <div className="flex justify-center mb-8">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
             {['All', 'Software', 'Hardware', 'Networking', 'Group'].map((filter) => (
               <button
                 key={filter}
                 onClick={() => handleFilterChange(filter)}
-                className={`px-4 py-2 mx-0 text-sm sm:text-md  sm:mx-1 glow-effect rounded-full ${selectedFilter === filter ? 'bg-accent text-text' : 'bg-secondary text-text'}`}
+                className={`px-4 py-2 text-sm sm:text-md glow-effect rounded-full ${selectedFilter === filter ? 'bg-accent text-text' : 'bg-secondary text-text'}`}
               >
                 {filter}
               </button>
