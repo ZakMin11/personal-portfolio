@@ -83,7 +83,7 @@ const Hero = () => {
         <div className="w-full h-full">
           <iframe
             src={resume}
-            className="w-full h-full"
+            className="w-screen h-screen"
             style={{ border: "none"}}
             title="Resume"
           ></iframe>
