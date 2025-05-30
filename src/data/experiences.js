@@ -14,7 +14,7 @@ const experiences = [
     },
     {
       company: "Firefly",
-      position: "Technician",
+      position: "Technician - Summer Intern",
       duration: "Mar 2022 – Aug 2022",
       description: [
         "Gained expertise in firmware and hardware troubleshooting for digital billboards on taxis and rideshare cars",
