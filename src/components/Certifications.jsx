@@ -9,7 +9,7 @@ const certifications = [
   },
   {
     title: "Food Bank Volunteer",
-    status: "In Progress",
+    status: "",
     description: "With over 50 hours of volunteer work at the CommUnity Crisis Food Bank in Iowa City, I have helped package and distribute food to those in need.",
     date: "2024-Present",
   },

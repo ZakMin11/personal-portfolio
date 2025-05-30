@@ -1,3 +1,7 @@
+import dev from '../assets/projectAssets/nibbleMate/dev.png';
+import threeD from '../assets/projectAssets/nibbleMate/3d.png';
+import schem from '../assets/projectAssets/nibbleMate/schem.png';
+import schema from '../assets/projectAssets/nibbleMate/schema.png';
 import therm1 from '../assets/projectAssets/thermostat/front.jpg';
 import therm2 from '../assets/projectAssets/thermostat/inside.JPG';
 import ir1 from '../assets/projectAssets/irReceiver/circuit.jpg';
@@ -10,6 +14,16 @@ import NC1 from '../assets/projectAssets/ninjaCube/ninjaCube.png';
 import NC2 from '../assets/projectAssets/ninjaCube/ninja2.png';
 
 const projects = [
+    {
+      title: "nibbleMate",
+      type: ["Hardware", "Software", "Networking", "Group"],
+      description: "A smart, modular pet feeder for multi-pet households that uses RFID-based pet recognition to automate portioned feeding, monitors food intake and pet weight in real time, and syncs data to a cross-platform app that leverages AI to deliver personalized insights and recommendations for improving pet health.",
+      detailedDescription: "As the lead developer and systems designer, I played a central role in creating a smart, modular automatic pet feeder for multi-pet households. I fully 3D-modeled the mechanical design, developed the companion cross-platform web application using React Native and Expo, and selected a robust tech stack with Supabase for real-time database synchronization, authentication, and cloud storage. I architected and implemented the feeder’s hardware system—excluding the RFID reader—designing circuits that integrated load cells, a stepper motor–driven auger, and a servo-controlled access door, all orchestrated by an ESP32 microcontroller. I also contributed to the backend architecture and implemented secure user authentication. The feeder identifies individual pets via RFID or microchips, dispenses personalized food portions, and records key metrics like weight and consumption. This data is analyzed and surfaced through the app, which leverages AI to provide users with personalized insights into their pets’ health and feeding behaviors.",
+      technologies: ["ESP32", "C++", "React Native", "Expo", "Postgres/Supabase", "Fusion 360", "3D Printing", "Circuit Design", "IoT"],
+      link: "",
+      images: [threeD, dev, schem, schema],
+      videoLink: "https://www.youtube.com/embed/r1YfOpTduMA?si=GI9WjTnuAIHjcpp5"
+    },  
     {
       title: "IoT Thermostat",
       type: ["Hardware", "Software", "Networking", "Group"],
