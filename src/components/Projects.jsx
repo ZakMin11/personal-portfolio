@@ -3,15 +3,13 @@ import projects from '../data/projects';
 import ExpandedProject from './ExpandedProject';
 import '../styles/About.css';
 
-
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null);
   const [selectedFilter, setSelectedFilter] = useState('All');
+  const [isTransitioning, setIsTransitioning] = useState(false); // NEW
   const projectsRef = useRef(null);
 
-  const closeExpandedProject = () => {
-    setExpandedProject(null);
-  };
+  const closeExpandedProject = () => setExpandedProject(null);
 
   useEffect(() => {
     if (expandedProject !== null && projectsRef.current) {
@@ -19,15 +17,20 @@ const Projects = () => {
     }
   }, [expandedProject]);
 
-  const toggleExpandProject = (index) => {
-    setExpandedProject(index);
-  };
+  const toggleExpandProject = (index) => setExpandedProject(index);
 
   const handleFilterChange = (filter) => {
-    setSelectedFilter(filter);
+    if (filter === selectedFilter) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setSelectedFilter(filter);
+      setIsTransitioning(false);
+    }, 200); // Duration matches CSS transition
   };
 
-  const filteredProjects = selectedFilter === 'All' ? projects : projects.filter(project => project.type.includes(selectedFilter));
+  const filteredProjects = selectedFilter === 'All'
+    ? projects
+    : projects.filter(project => project.type.includes(selectedFilter));
 
   return (
     <section id="projects" className="py-10 bg-background font-manrope" ref={projectsRef}>
@@ -49,7 +52,7 @@ const Projects = () => {
           </div>
         )}
         {expandedProject === null ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-projects ${isTransitioning ? 'fade-out' : 'fade-in'}`}>
             {filteredProjects.map((project, index) => (
               <div key={index} className="bg-secondary rounded-lg shadow-md p-6 flex flex-col">
                 <h3 className="text-xl font-semibold mb-2 text-text text-center">{project.title}</h3>

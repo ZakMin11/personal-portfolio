@@ -29,7 +29,7 @@ const Hero = () => {
             </p>
             
             <p className="text-xl text-text flex items-center justify-center md:justify-start">
-              <FaClock className="mr-2" /> Expected Graduation: May 2025
+              <FaClock className="mr-2" /> Graduated May 2025
             </p>
           </div>
           

@@ -36,4 +36,13 @@ button:hover {
   span{
     color: inherit;
   }
+.transition-projects {
+  transition: opacity 0.2s ease;
+}
+.fade-in {
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0;
+}
  
