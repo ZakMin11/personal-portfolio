@@ -2,6 +2,7 @@ import dev from '../assets/projectAssets/nibbleMate/dev.png';
 import threeD from '../assets/projectAssets/nibbleMate/3d.png';
 import schem from '../assets/projectAssets/nibbleMate/schem.png';
 import schema from '../assets/projectAssets/nibbleMate/schema.png';
+import master from '../assets/projectAssets/mastermind/master.png';
 import therm1 from '../assets/projectAssets/thermostat/front.jpg';
 import therm2 from '../assets/projectAssets/thermostat/inside.JPG';
 import ir1 from '../assets/projectAssets/irReceiver/circuit.jpg';
@@ -23,6 +24,16 @@ const projects = [
       link: "",
       images: [threeD, dev, schem, schema],
       videoLink: "https://www.youtube.com/embed/r1YfOpTduMA?si=GI9WjTnuAIHjcpp5"
+    },  
+    {
+      title: "Mastermind",
+      type: ["Hardware", "Software", "Networking", "Group"],
+      description: "An AI-powered, IoT-based poker assistant that uses smart glasses, real-time object detection, and a mobile app to provide strategic gameplay advice to new players.",
+      detailedDescription: "Mastermind is a real-time intelligent poker assistant that uses a wearable Raspberry Pi-based camera system embedded in 3D-printed glasses to identify playing cards during live gameplay. The device streams video to a FastAPI inference server hosted on Google Cloud Platform, where a fine-tuned YOLOv8 model detects the cards in view. These card values are then stored and synchronized using Firebase’s real-time database and Firestore services. I developed the mobile application using React Native and Expo, building out the frontend layout and enabling real-time interaction with the backend. The app allows users to view detected cards and receive poker strategy advice at each game stage (pre-flop, flop, turn, river), which is generated using structured queries to OpenAI's ChatGPT-3.5-Turbo API. I also contributed to the project’s backend architecture by helping design the data flow between the Pi, inference server, Firebase, and app—ensuring a responsive and secure experience through proper use of Firebase Authentication and cloud-based callbacks. This system showcases seamless integration between embedded vision, AI inference, real-time data pipelines, and cross-platform app development, all structured to deliver actionable poker advice in an intuitive user interface.",
+      technologies: ["Machine learning", "YOLOv8", "Raspbery Pi", "Roboflow", "React Native", "Expo", "GCP", "FastAPI", "Websockets", "Firebase", "IoT"],
+      link: "",
+      images: [master],
+      videoLink: "https://www.youtube.com/embed/NuvCnjqJPv8"
     },  
     {
       title: "IoT Thermostat",
