@@ -5,7 +5,7 @@ const Resume = () => {
   return (
     <div className="flex justify-center mt-8">
       <iframe
-        src="src/assets/resume/2025SpringResumeApplicatioEng.pdf"
+        src="src/assets/resume/2025EEResume.pdf"
         width="100%"
         height="600px"
         className="border-0"

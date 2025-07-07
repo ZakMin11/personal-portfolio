@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaClock } from "react-icons/fa";
 import Modal from './Modal';
 import headshot from '../assets/headshot/headshot-green.png';
-import resume from "../assets/resume/2025SpringResumeApplicatioEng.pdf";
+import resume from "../assets/resume/2025EEResume.pdf";
 import '../styles/About.css';
 
 const Hero = () => {
