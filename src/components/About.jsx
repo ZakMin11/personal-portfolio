@@ -11,7 +11,7 @@ const About = () => {
         <h2 className="text-3xl font-bold text-center text-text mb-12">About Me</h2>
         <div className="bg-secondary rounded-lg shadow-md p-6">
           <p className="text-text mb-4">
-            As an aspiring software developer, electrical engineer, and DevOps specialist, I combine my foundation in full-stack development with hands-on hardware experience to build comprehensive technology solutions. My focus spans electrical design, embedded systems, software development, mechanical design, and DevOps, while my background in computer science and electrical engineering drives my passion for practical innovation. 
+            As an aspiring software developer, electrical engineer, and DevOps specialist, I combine my foundation in full stack development with hands-on hardware experience to build comprehensive technology solutions. My focus spans electrical design, embedded systems, software development & design, and DevOps, while my background in computer science and electrical engineering drives my passion for practical innovation. 
           </p>
           <div className="mb-4">
             <h3 className="text-xl font-semibold mb-2 text-text">Hobbies</h3>

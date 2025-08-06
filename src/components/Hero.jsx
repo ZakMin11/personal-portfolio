@@ -3,11 +3,18 @@ import React, { useState } from 'react';
 import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaClock } from "react-icons/fa";
 import Modal from './Modal';
 import headshot from '../assets/headshot/headshot-green.png';
-import resume from "../assets/resume/2025EEResume.pdf";
+import EEResume from "../assets/resume/EE/2025EEResume.pdf";
+import WDResume from "../assets/resume/SW/2025WDResume.pdf";
 import '../styles/About.css';
 
 const Hero = () => {
   const [showResume, setShowResume] = useState(false);
+  const [currentResume, setCurrentResume] = useState('');
+
+  const openResume = (resumeType) => {
+    setCurrentResume(resumeType === 'ee' ? EEResume : WDResume);
+    setShowResume(true);
+  };
 
   return (
     <section id="hero" className="py-20 bg-secondary font-manrope relative">
@@ -55,10 +62,16 @@ const Hero = () => {
             </button>
           </a>
           <button
-            onClick={() => setShowResume(true)}
+            onClick={() => openResume('ee')}
             className="bg-accent text-text dark:text-text-dark px-4 py-2 rounded-full hover:bg-accent-dark glow-effect"
           >
-            View Resume
+            Electrical Engineering Resume
+          </button>
+          <button
+            onClick={() => openResume('wd')}
+            className="bg-accent text-text dark:text-text-dark px-4 py-2 rounded-full hover:bg-accent-dark glow-effect"
+          >
+            Web Dev Resume
           </button>
         </div>
       </div>
@@ -82,7 +95,7 @@ const Hero = () => {
       <Modal show={showResume} onClose={() => setShowResume(false)}>
         <div className="w-full h-full">
           <iframe
-            src={resume}
+            src={currentResume}
             className="w-screen h-screen"
             style={{ border: "none"}}
             title="Resume"

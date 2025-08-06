@@ -3,6 +3,7 @@ import threeD from '../assets/projectAssets/nibbleMate/3d.png';
 import schem from '../assets/projectAssets/nibbleMate/schem.png';
 import schema from '../assets/projectAssets/nibbleMate/schema.png';
 import master from '../assets/projectAssets/mastermind/master.png';
+import sisc from '../assets/projectAssets/sisc/SISC.png';
 import therm1 from '../assets/projectAssets/thermostat/front.jpg';
 import therm2 from '../assets/projectAssets/thermostat/inside.JPG';
 import ir1 from '../assets/projectAssets/irReceiver/circuit.jpg';
@@ -18,8 +19,8 @@ const projects = [
     {
       title: "nibbleMate",
       type: ["Hardware", "Software", "Networking", "Group"],
-      description: "A smart, modular pet feeder for multi-pet households that uses RFID-based pet recognition to automate portioned feeding, monitors food intake and pet weight in real time, and syncs data to a cross-platform app that leverages AI to deliver personalized insights and recommendations for improving pet health.",
-      detailedDescription: "As the lead developer and systems designer, I played a central role in creating a smart, modular automatic pet feeder for multi-pet households. I fully 3D-modeled the mechanical design, developed the companion cross-platform web application using React Native and Expo, and selected a robust tech stack with Supabase for real-time database synchronization, authentication, and cloud storage. I architected and implemented the feeder’s hardware system—excluding the RFID reader—designing circuits that integrated load cells, a stepper motor–driven auger, and a servo-controlled access door, all orchestrated by an ESP32 microcontroller. I also contributed to the backend architecture and implemented secure user authentication. The feeder identifies individual pets via RFID or microchips, dispenses personalized food portions, and records key metrics like weight and consumption. This data is analyzed and surfaced through the app, which leverages AI to provide users with personalized insights into their pets’ health and feeding behaviors.",
+      description: "A smart, modular pet feeder for multi-pet households that uses RFID based pet recognition to automate portioned feeding, monitors food intake and pet weight in real time, and syncs data to a cross platform app that leverages AI to deliver personalized insights and recommendations for improving pet health.",
+      detailedDescription: "As the lead developer and systems designer, I played a central role in creating a smart, modular automatic pet feeder for multi-pet households. I fully 3D modeled the mechanical design, developed the companion cross-platform web application using React Native and Expo, and selected a robust tech stack with Supabase for real-time database synchronization, authentication, and cloud storage. I architected and implemented the feeder’s hardware system, excluding the RFID reader, designing circuits that integrated load cells, a stepper motor driven auger, and a servo-controlled access door, all orchestrated by an ESP32 microcontroller. I also contributed to the backend architecture and implemented secure user authentication. The feeder identifies individual pets via RFID or microchips, dispenses personalized food portions, and records key metrics like weight and consumption. This data is analyzed and surfaced through the app, which leverages AI to provide users with personalized insights into their pets’ health and feeding behaviors.",
       technologies: ["ESP32", "C++", "React Native", "Expo", "Postgres/Supabase", "Fusion 360", "3D Printing", "Circuit Design", "IoT"],
       link: "",
       images: [threeD, dev, schem, schema],
@@ -29,12 +30,32 @@ const projects = [
       title: "Mastermind",
       type: ["Hardware", "Software", "Networking", "Group"],
       description: "An AI-powered, IoT-based poker assistant that uses smart glasses, real-time object detection, and a mobile app to provide strategic gameplay advice to new players.",
-      detailedDescription: "Mastermind is a real-time intelligent poker assistant that uses a wearable Raspberry Pi-based camera system embedded in 3D-printed glasses to identify playing cards during live gameplay. The device streams video to a FastAPI inference server hosted on Google Cloud Platform, where a fine-tuned YOLOv8 model detects the cards in view. These card values are then stored and synchronized using Firebase’s real-time database and Firestore services. I developed the mobile application using React Native and Expo, building out the frontend layout and enabling real-time interaction with the backend. The app allows users to view detected cards and receive poker strategy advice at each game stage (pre-flop, flop, turn, river), which is generated using structured queries to OpenAI's ChatGPT-3.5-Turbo API. I also contributed to the project’s backend architecture by helping design the data flow between the Pi, inference server, Firebase, and app—ensuring a responsive and secure experience through proper use of Firebase Authentication and cloud-based callbacks. This system showcases seamless integration between embedded vision, AI inference, real-time data pipelines, and cross-platform app development, all structured to deliver actionable poker advice in an intuitive user interface.",
+      detailedDescription: "Mastermind is a real time intelligent poker assistant that uses a wearable Raspberry Pi camera system embedded in 3D printed glasses to identify playing cards during live gameplay. The device streams video to a FastAPI inference server hosted on Google Cloud Platform, where a fine tuned YOLOv8 model detects the cards in view. These card values are then stored and synchronized using Firebase’s real time database and Firestore services. I developed the mobile application using React Native and Expo, building out the frontend layout and enabling real time interaction with the backend. The app allows users to view detected cards and receive poker strategy advice at each game stage (flop, turn, river), which is generated using structured queries to OpenAI's ChatGPT3.5 Turbo API. I also contributed to the project’s backend architecture by helping design the data flow between the Pi, inference server, Firebase, and app ensuring a responsive and secure experience through proper use of Firebase Authentication and cloud-based callbacks. This system showcases seamless integration between embedded vision, AI inference, real time data pipelines, and cross-platform app development, all structured to deliver actionable poker advice in an intuitive user interface.",
       technologies: ["Machine learning", "YOLOv8", "Raspbery Pi", "Roboflow", "React Native", "Expo", "GCP", "FastAPI", "Websockets", "Firebase", "IoT"],
       link: "",
       images: [master],
       videoLink: "https://www.youtube.com/embed/NuvCnjqJPv8"
     },  
+    {
+      title: "SISC Computer - Verilog CPU",
+      type: ["Hardware", "Software"],
+      description: "Designed and implemented a 32-bit RISC style processor using Verilog, complete with custom control logic, instruction and data memory, and support for arithmetic, branching, and memory operations.",
+      detailedDescription: "This project involved building a 32-bit Simple Instruction Set Computer (SISC) from the ground up in Verilog as part of a computer architecture course. I implemented the processor’s datapath and designed the control unit as a finite state machine to execute arithmetic, logical, branch, and memory instructions. The processor supported instruction fetch, decode, and execute stages, along with custom branching logic and program counter management. I extended the architecture with instruction and data memory modules and integrated full load/store functionality. To validate the design, I wrote two complete machine language programs: an integer bubble sort and a 64 bit multiplier, all executed entirely on the simulated processor using ModelSim. The project emphasized low level hardware design, synchronization, and system level integration across the datapath and control flow.",
+      technologies: ["HDL", "Verilog", "ModelSim", "FSM Control", "Custom RISC Architecture"],
+      link: "",
+      images: [sisc],
+      videoLink: ""
+    },
+    {
+      title: "IR Receiver/Filter",
+      type: ["Hardware", "Software", "Group"],
+      description: "An infrared (IR) receiver system that integrates analog filtering for noise suppression with digital signal processing for improved reliability under ambient interference.",
+      detailedDescription: "During the first half of my Senior Design coursework at the University of Iowa, my senior design team and I developed a sophisticated safety system that combines analog circuit design with digital signal processing. The system utilizes an IR photodiode receiver (OP598A) optimized for 940nm wavelength detection, coupled with a multi-stage signal processing circuit. The design implements a non-inverting pre-amplifier with 9.2x gain, followed by a 2nd-order multi-feedback bandpass filter centered at 421Hz with a 42.1Hz bandwidth, effectively attenuating 92% of 120Hz noise. The processed signal interfaces with an ESP32 microcontroller through a voltage divider network, where a 6th-order Chebyshev digital filter provides additional signal conditioning. The system features real-time safety monitoring with automated text message alerts through IFTTT webhooks when beam interruption is detected, demonstrating my ability in analog circuit design, digital signal processing, and IoT integration. Please see our senior design report for a more detailed explanation of the project: https://teamadmin.io/",
+      technologies: ["ESP32", "PCD Design", "Circuit Analysis", "Signal Processing", "C/C++", "Sample Hysteresis", "CAD"],
+      link: "",
+      images: [ir1, ir2],
+      videoLink: ""
+    },
     {
       title: "IoT Thermostat",
       type: ["Hardware", "Software", "Networking", "Group"],
@@ -46,19 +67,9 @@ const projects = [
       videoLink: ""
     },
     {
-      title: "IR Receiver/Filter",
-      type: ["Hardware", "Software", "Group"],
-      description: "A safety system that combines analog circuit and digital design signal processing",
-      detailedDescription: "During the first half of my Senior Design coursework at the University of Iowa, my senior design team and I developed a sophisticated safety system that combines analog circuit design with digital signal processing. The system utilizes an IR photodiode receiver (OP598A) optimized for 940nm wavelength detection, coupled with a multi-stage signal processing circuit. The design implements a non-inverting pre-amplifier with 9.2x gain, followed by a 2nd-order multi-feedback bandpass filter centered at 421Hz with a 42.1Hz bandwidth, effectively attenuating 92% of 120Hz noise. The processed signal interfaces with an ESP32 microcontroller through a voltage divider network, where a 6th-order Chebyshev digital filter provides additional signal conditioning. The system features real-time safety monitoring with automated text message alerts through IFTTT webhooks when beam interruption is detected, demonstrating my ability in analog circuit design, digital signal processing, and IoT integration. Please see our senior design report for a more detailed explanation of the project: https://teamadmin.io/",
-      technologies: ["ESP32", "PCD Design", "Circuit Analysis", "Signal Processing", "C/C++", "Sample Hysteresis", "CAD"],
-      link: "",
-      images: [ir1, ir2],
-      videoLink: ""
-    },
-    {
       title: "IPhone/remote controlled light switch",
       type: ["Hardware", "Software", "Group"],
-      description: "Portable device that uses infrared signals to activite a light switch. Can be controlled via iPhone IR pulses",
+      description: "Portable device that allows users to control their lightswitches using any IR remote control or iPhone.",
       detailedDescription: "During my embedded systems coursework at the University of Iowa, Dawson Crowley and I developed a remote-controlled light switch automation system that allows users to control standard household light switches using any IR remote control. The project combines an Arduino Nano (ATMega328p) microcontroller with a KSOP4838 IR sensor and SG90 servo motor to create a non-destructive, easily installable solution. Using C programming, I implemented precise PWM control for the servo motor and robust IR signal processing that works reliably up to 20 feet away. The system features custom mounting hardware that attaches via Command Strips, making it an apartment-friendly solution that requires no permanent modifications. The device includes visual feedback through an LED indicator and is powered by a standard 9V battery. This project demonstrated my skills in embedded systems programming, signal processing, and mechanical design while solving a practical everyday problem.",
       technologies: ["ATMega328p", "Assembly C", "Hardware Design", "IoT"],
       link: "https://github.com/ZakMin11/IR-Sensing-Light-Switch",

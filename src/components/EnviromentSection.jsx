@@ -6,8 +6,8 @@ const environments = {
     editors: ["Vim", "VSCode", "Sublime Text", "IntelliJ", "Replit", "CLion", "Visual Studio", "Eclipse", "xCode", "Android Studio", "Arduino IDE", "Atmel Studio", "Brackets"],
     version_control: ["Git", "GitHub", "GitLab"],
     cli: ["Bash", "Zsh", "PowerShell"],
-    languages: ["Java", "C","Embedded C", "C++", "C#", "Python", "HTML/CSS/JS/PHP", "Node JS", "React JS", "Next JS", "Express", "MySQL", "Julia", "Atmel AVR", "Processing.JS", "MATLAB", "Adobe ExtendScript", "Swift", "Bootstrap 5", "TailwindCSS"],
-    softwares: ["VMWare Fusion","MicroCap Spice", "Fusion 360", "Wine", "Wireshark", "Adobe After Effects", "Premiere Pro", "Slack", "Termius", "PingPlotter", "MySQLWorkbench", "Microsoft Suite", "Adobe Suite", "GIMP", "eraser.io", "Firebase", "Clerk"]
+    languages: ["Java", "C","Embedded C", "C++", "C#", "Python", "HTML/CSS/JS/PHP", "Node.JS", "React.JS", "Next.JS", "Express", "MySQL", "Verilog",  "Julia", "Atmel AVR", "Processing.JS", "MATLAB", "Adobe ExtendScript", "Swift", "Bootstrap 5", "TailwindCSS"],
+    softwares: ["VMWare Fusion","MicroCap Spice", "Fusion 360", "Wine", "Wireshark", "Adobe After Effects", "Premiere Pro", "Slack", "Termius", "PingPlotter", "MySQLWorkbench", "ModelSim", "Microsoft Suite", "Adobe Suite", "GIMP", "KiCad", "eraser.io", "Firebase", "Clerk"]
   }
 };
 

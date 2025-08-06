@@ -3,18 +3,20 @@ const experiences = [
     {
       company: "Outsider",
       position: "Full Stack Developer",
-      duration: "Dec 2024 - Present",
+      duration: "Dec 2024 - June 2025",
       description: [
-        "Using Next.js, React, and Tailwind CSS to develop a responsive and interactive web application",
+        "Using React Native, Expo, and Tailwind CSS to develop a responsive and interactive web application",
+        "Developed a deployable MVP in 6 weeks while leading a team of three developers",
         "Demonstrate proficiency in database design and management using PostgreSQL and Prisma ORM",
         "Responsible for integrating third-party APIs and services to enhance user experience and functionality",
+        "Developed and maintained RESTful APIs to support front-end functionality",
         "Participate in Agile processes by contributing to weekly stand-ups and observing development sprints"
       ]
       
     },
     {
       company: "Firefly",
-      position: "Technician - Summer Intern",
+      position: "Engineering Technician - Summer Intern",
       duration: "Mar 2022 – Aug 2022",
       description: [
         "Gained expertise in firmware and hardware troubleshooting for digital billboards on taxis and rideshare cars",
