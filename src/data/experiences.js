@@ -1,5 +1,19 @@
 import alleyImage from "../assets/work/mechanic.JPG";
 const experiences = [
+  {
+      company: "FlipWyz",
+      position: "Independent Software Contractor - Full Stack Developer",
+      duration: "Aug 2025 - Current",
+      description: [
+        "Using React Native, Expo, and Tailwind CSS to develop a responsive and interactive web application",
+        "Developed a deployable MVP in 6 weeks while leading a team of three developers",
+        "Demonstrate proficiency in database design and management using PostgreSQL and Prisma ORM",
+        "Responsible for integrating third-party APIs and services to enhance user experience and functionality",
+        "Developed and maintained RESTful APIs to support front-end functionality",
+        "Participate in Agile processes by contributing to weekly stand-ups and observing development sprints"
+      ]
+      
+    },
     {
       company: "Outsider",
       position: "Full Stack Developer",

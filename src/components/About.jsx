@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/About.css'; // Import the CSS file
 
 const About = () => {
-  const hobbies = ["Traveling", "Hiking", "Gaming", "CAD", "Chess", "3D Printing", "Cooking", "Mountian Biking", "Snowboarding", "Video Editing", "Fishing", "Photography", "Music", "Lifting", "Running", "Ping Pong", "Helping grandma <3"];
+  const hobbies = ["Traveling", "Hiking", "Gaming", "CAD", "Chess", "3D Printing", "Cooking", "Mountian Biking", "Snowboarding", "Video Editing", "Fishing", "Photography", "Music", "Lifting", "Running", "Ping Pong"];
   const interests = ["DevOps", "AI", "Robotics", "IoT", "Machine Learning", "Cloud Computing", "Cybersecurity", "Hardware","Firmware", "Web Development"];
 
   return (
@@ -11,7 +11,7 @@ const About = () => {
         <h2 className="text-3xl font-bold text-center text-text mb-12">About Me</h2>
         <div className="bg-secondary rounded-lg shadow-md p-6">
           <p className="text-text mb-4">
-            As an aspiring software developer, electrical engineer, and DevOps specialist, I combine my foundation in full stack development with hands-on hardware experience to build comprehensive technology solutions. My focus spans electrical design, embedded systems, software development & design, and DevOps, while my background in computer science and electrical engineering drives my passion for practical innovation. 
+            I am a full stack developer and electrical engineer who loves learning, building, and refining systems. Whether designing a web app, structuring a database, or connecting software to hardware, I aim to create solutions that are thoughtful, efficient, and built to last.
           </p>
           <div className="mb-4">
             <h3 className="text-xl font-semibold mb-2 text-text">Hobbies</h3>
