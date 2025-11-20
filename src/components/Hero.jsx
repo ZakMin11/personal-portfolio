@@ -1,6 +1,6 @@
 // filepath: /Users/zakmineiko/school/personalWebsite/zakPortfolio/src/components/Hero.jsx
 import React, { useState } from 'react';
-import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaClock } from "react-icons/fa";
+import { FaSchool, FaGraduationCap, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaClock, FaChevronDown } from "react-icons/fa";
 import Modal from './Modal';
 import headshot from '../assets/headshot/headshot-green.png';
 import EEResume from "../assets/resume/EE/2025EEResume.pdf";
@@ -10,10 +10,12 @@ import '../styles/About.css';
 const Hero = () => {
   const [showResume, setShowResume] = useState(false);
   const [currentResume, setCurrentResume] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const openResume = (resumeType) => {
     setCurrentResume(resumeType === 'ee' ? EEResume : WDResume);
     setShowResume(true);
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -56,23 +58,36 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex justify-center mt-8 space-x-4">
-          <a href="https://teamadmin.io" target="_blank" rel="noopener noreferrer">
-            <button className="bg-accent text-text dark:text-text-dark px-4 py-2 rounded-full hover:bg-accent-dark glow-effect">
-              Senior Design Team
+          
+          
+          {/* Dropdown Button */}
+          <div className="relative">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="bg-accent text-text dark:text-text-dark px-4 py-2 rounded-full hover:bg-accent-dark glow-effect flex items-center space-x-2"
+            >
+              <span>View Resume</span>
+              <FaChevronDown className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
-          </a>
-          <button
-            onClick={() => openResume('ee')}
-            className="bg-accent text-text dark:text-text-dark px-4 py-2 rounded-full hover:bg-accent-dark glow-effect"
-          >
-            Electrical Engineering Resume
-          </button>
-          <button
-            onClick={() => openResume('wd')}
-            className="bg-accent text-text dark:text-text-dark px-4 py-2 rounded-full hover:bg-accent-dark glow-effect"
-          >
-            Web Dev Resume
-          </button>
+            
+            {/* Dropdown Menu */}
+            {isDropdownOpen && (
+              <div className="absolute top-full mt-2 bg-primary rounded-lg shadow-lg overflow-hidden z-10 min-w-full">
+                <button
+                  onClick={() => openResume('wd')}
+                  className="block w-full text-left px-4 py-3 text-text hover:bg-accent hover:text-text-dark transition-colors whitespace-nowrap"
+                >
+                  SW Variant
+                </button>
+                <button
+                  onClick={() => openResume('ee')}
+                  className="block w-full text-left px-4 py-3 text-text hover:bg-accent hover:text-text-dark transition-colors whitespace-nowrap"
+                >
+                  EE Variant
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 w-full">
