@@ -87,13 +87,41 @@ const ProjectCard = ({ project, originalIndex, onExpand }) => {
   );
 };
 
+// Slug helpers — converts "nibbleMate" ↔ "nibblemate"
+const toSlug = (title) => title.toLowerCase().replace(/\s+/g, '-');
+const indexFromSlug = (slug) => projects.findIndex((p) => toSlug(p.title) === slug);
+
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null);
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [isTransitioning, setIsTransitioning] = useState(false);
   const projectsRef = useRef(null);
 
-  const closeExpandedProject = () => setExpandedProject(null);
+  // On mount, check for ?project=slug in the URL and auto-open that project
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('project');
+    if (slug) {
+      const idx = indexFromSlug(slug);
+      if (idx !== -1) setExpandedProject(idx);
+    }
+  }, []);
+
+  // When a project opens/closes, update the URL query param (no page reload)
+  const openProject = (index) => {
+    const slug = toSlug(projects[index].title);
+    const url = new URL(window.location);
+    url.searchParams.set('project', slug);
+    window.history.pushState({}, '', url);
+    setExpandedProject(index);
+  };
+
+  const closeExpandedProject = () => {
+    const url = new URL(window.location);
+    url.searchParams.delete('project');
+    window.history.pushState({}, '', url);
+    setExpandedProject(null);
+  };
 
   useEffect(() => {
     if (expandedProject !== null && projectsRef.current) {
@@ -150,7 +178,7 @@ const Projects = () => {
                 key={originalIndex}
                 project={project}
                 originalIndex={originalIndex}
-                onExpand={setExpandedProject}
+                onExpand={openProject}
               />
             ))}
           </div>
