@@ -2,8 +2,13 @@ import dev from '../assets/projectAssets/nibbleMate/dev.png';
 import threeD from '../assets/projectAssets/nibbleMate/3d.png';
 import schem from '../assets/projectAssets/nibbleMate/schem.png';
 import schema from '../assets/projectAssets/nibbleMate/schema.png';
+import nibblemateGif from '../assets/projectAssets/nibbleMate/nibblematebuild.gif';
+import doorMech from '../assets/projectAssets/nibbleMate/doorMech.gif';
+import allView from '../assets/projectAssets/nibbleMate/allView.gif';
+import editedDemo from '../assets/projectAssets/nibbleMate/editedDemo.gif';
 import master from '../assets/projectAssets/mastermind/master.png';
 import sisc from '../assets/projectAssets/sisc/SISC.png';
+import car from '../assets/projectAssets/carMaintenence/car.gif';
 import therm1 from '../assets/projectAssets/thermostat/front.jpg';
 import therm2 from '../assets/projectAssets/thermostat/inside.JPG';
 import ir1 from '../assets/projectAssets/irReceiver/circuit.jpg';
@@ -15,6 +20,17 @@ import LB2 from "../assets/projectAssets/customBattery/battery.JPG";
 import NC1 from '../assets/projectAssets/ninjaCube/ninjaCube.png';
 import NC2 from '../assets/projectAssets/ninjaCube/ninja2.png';
 
+import proto2 from '../assets/projectAssets/BDPT/proto2.gif';
+import gearbox from '../assets/projectAssets/BDPT/gearbox.jpg';
+import proto3 from '../assets/projectAssets/BDPT/proto3.gif';
+import prototrim from '../assets/projectAssets/BDPT/prototrim.gif';
+import proto4 from '../assets/projectAssets/BDPT/proto4.jpg';
+import proto4sofar from '../assets/projectAssets/BDPT/proto4sofar.jpg';
+
+import cadnew from '../assets/projectAssets/laptopCooler/cadnew.png';
+import nomac from '../assets/projectAssets/laptopCooler/nomac.jpg';
+import sidemac from '../assets/projectAssets/laptopCooler/sidemac.jpg';
+import withmac from '../assets/projectAssets/laptopCooler/withmac.jpg';
 const projects = [
     {
       title: "nibbleMate",
@@ -23,19 +39,29 @@ const projects = [
       detailedDescription: "As the lead developer and systems designer, I played a central role in creating a smart, modular automatic pet feeder for multi-pet households. I fully 3D modeled the mechanical design, developed the companion cross-platform web application using React Native and Expo, and selected a robust tech stack with Supabase for real-time database synchronization, authentication, and cloud storage. I architected and implemented the feeder’s hardware system, excluding the RFID reader, designing circuits that integrated load cells, a stepper motor driven auger, and a servo-controlled access door, all orchestrated by an ESP32 microcontroller. I also contributed to the backend architecture and implemented secure user authentication. The feeder identifies individual pets via RFID or microchips, dispenses personalized food portions, and records key metrics like weight and consumption. This data is analyzed and surfaced through the app, which leverages AI to provide users with personalized insights into their pets’ health and feeding behaviors.",
       technologies: ["ESP32", "C++", "React Native", "Expo", "Postgres/Supabase", "Fusion 360", "3D Printing", "Circuit Design", "IoT"],
       link: "",
-      images: [threeD, dev, schem, schema],
+      images: [allView, dev, schem, schema, nibblemateGif, doorMech, editedDemo],
       videoLink: "https://www.youtube.com/embed/r1YfOpTduMA?si=GI9WjTnuAIHjcpp5"
     },  
     {
-      title: "Mastermind",
-      type: ["Hardware", "Software", "Networking", "Group"],
-      description: "An AI-powered, IoT-based poker assistant that uses smart glasses, real-time object detection, and a mobile app to provide strategic gameplay advice to new players.",
-      detailedDescription: "Mastermind is a real time intelligent poker assistant that uses a wearable Raspberry Pi camera system embedded in 3D printed glasses to identify playing cards during live gameplay. The device streams video to a FastAPI inference server hosted on Google Cloud Platform, where a fine tuned YOLOv8 model detects the cards in view. These card values are then stored and synchronized using Firebase’s real time database and Firestore services. I developed the mobile application using React Native and Expo, building out the frontend layout and enabling real time interaction with the backend. The app allows users to view detected cards and receive poker strategy advice at each game stage (flop, turn, river), which is generated using structured queries to OpenAI's ChatGPT3.5 Turbo API. I also contributed to the project’s backend architecture by helping design the data flow between the Pi, inference server, Firebase, and app ensuring a responsive and secure experience through proper use of Firebase Authentication and cloud-based callbacks. This system showcases seamless integration between embedded vision, AI inference, real time data pipelines, and cross-platform app development, all structured to deliver actionable poker advice in an intuitive user interface.",
-      technologies: ["Machine learning", "YOLOv8", "Raspbery Pi", "Roboflow", "React Native", "Expo", "GCP", "FastAPI", "Websockets", "Firebase", "IoT"],
+      title: "Beer Dispensing Poker Table - In Progress",
+      type: ["Hardware", "Software"],
+      description: "A custom built poker table that integrates an automatic beer dispensing system.",
+      detailedDescription: "What started as a joke turned into a nagging engineering problem I could not let go. A poker table that launches a beer to your seat at the press of a button. No more getting up. The constraints make it harder than it sounds: noise level, space optimization, beer can capacity, repeated mechanical reliability, a feeder and launching mechanism working in tandem, and ease of use. I started with a 5V motor and went deep — designed and built a 120:1 torque multiplying gearbox from scratch before concluding the motor itself was simply too weak for the load. Scrapped it. Moved to a 12V windshield wiper motor pulled from a scrap yard. Built the motor driver circuit to control it, then went through multiple design iterations on the launching mechanism before settling on a spring loaded linear slide driven by a partial rack and pinion. Tested and confirmed it launches a can roughly two feet in the air consistently. Currently modelling the feeder mechanism to inform how the launching assembly mounts. The full system is not finished, but the hard part works.",
+      technologies: ["ESP32", "Mechanical Design", "Fusion 360", "3D Printing", "Circuit Design", "IoT"],
       link: "",
-      images: [master],
-      videoLink: "https://www.youtube.com/embed/NuvCnjqJPv8"
+      images: [proto3, proto2, gearbox, prototrim, proto4, proto4sofar],
+      videoLink: ""
     },  
+    {
+      title: "IR Receiver/Filter",
+      type: ["Hardware", "Software", "Group"],
+      description: "An infrared (IR) receiver system that integrates analog filtering for noise suppression with digital signal processing for improved reliability under ambient interference.",
+      detailedDescription: "During the first half of my Senior Design coursework at the University of Iowa, my senior design team and I developed a sophisticated safety system that combines analog circuit design with digital signal processing. The system utilizes an IR photodiode receiver (OP598A) optimized for 940nm wavelength detection, coupled with a multi-stage signal processing circuit. The design implements a non-inverting pre-amplifier with 9.2x gain, followed by a 2nd-order multi-feedback bandpass filter centered at 421Hz with a 42.1Hz bandwidth, effectively attenuating 92% of 120Hz noise. The processed signal interfaces with an ESP32 microcontroller through a voltage divider network, where a 6th-order Chebyshev digital filter provides additional signal conditioning. The system features real-time safety monitoring with automated text message alerts through IFTTT webhooks when beam interruption is detected, demonstrating my ability in analog circuit design, digital signal processing, and IoT integration. Please see our senior design report for a more detailed explanation of the project: https://teamadmin.io/",
+      technologies: ["ESP32", "PCD Design", "Circuit Analysis", "Signal Processing", "C/C++", "Sample Hysteresis", "CAD"],
+      link: "",
+      images: [ir1, ir2],
+      videoLink: ""
+    },
     {
       title: "SISC Computer - Verilog CPU",
       type: ["Hardware", "Software"],
@@ -47,15 +73,45 @@ const projects = [
       videoLink: ""
     },
     {
-      title: "IR Receiver/Filter",
-      type: ["Hardware", "Software", "Group"],
-      description: "An infrared (IR) receiver system that integrates analog filtering for noise suppression with digital signal processing for improved reliability under ambient interference.",
-      detailedDescription: "During the first half of my Senior Design coursework at the University of Iowa, my senior design team and I developed a sophisticated safety system that combines analog circuit design with digital signal processing. The system utilizes an IR photodiode receiver (OP598A) optimized for 940nm wavelength detection, coupled with a multi-stage signal processing circuit. The design implements a non-inverting pre-amplifier with 9.2x gain, followed by a 2nd-order multi-feedback bandpass filter centered at 421Hz with a 42.1Hz bandwidth, effectively attenuating 92% of 120Hz noise. The processed signal interfaces with an ESP32 microcontroller through a voltage divider network, where a 6th-order Chebyshev digital filter provides additional signal conditioning. The system features real-time safety monitoring with automated text message alerts through IFTTT webhooks when beam interruption is detected, demonstrating my ability in analog circuit design, digital signal processing, and IoT integration. Please see our senior design report for a more detailed explanation of the project: https://teamadmin.io/",
-      technologies: ["ESP32", "PCD Design", "Circuit Analysis", "Signal Processing", "C/C++", "Sample Hysteresis", "CAD"],
+      title: "Custom Electric Longboard battery pack",
+      type: ["Hardware"],
+      description: "A custom battery pack for an Evolve electric longboard that uses 18650 cells configured to existing battery management system (BMS).",
+      detailedDescription: "The stock battery was the bottleneck. I designed and built a replacement 10s2p pack from 18650 lithium ion cells, spot welded the nickel strips myself, and integrated it with the existing BMS. The pack outputs 135 amps and fit within the original enclosure. Results were immediate: range doubled, top speed increased from 20 to 25 mph. The board can now run a full charge on the fastest mode further than the old pack on eco mode. Building this forced me to get serious about BMS integration, proper wire management, and insulation. One mistake with lithium cells at this current output is a fire. It has run without issue for years.",
+      technologies: ["Battery Design", "Circuit Analysis", "Voltage/Current Calculations", "BMS integration"],
       link: "",
-      images: [ir1, ir2],
+      images: [LB2,LB1],
+      videoLink: "https://youtube.com/embed/wP0nA2YVpxA"
+    },
+    {
+      title: "Car Repairs",
+      type: ["Hardware"],
+      description: "If I can fix it, I do. Six years of general maintenance and repairs on 2003 Toyota Solara.",
+      detailedDescription: "Kept a 2003 Toyota Solara running for six years. I do not like bringing my car to the mechanic if I have the time to fix it myself. Diagnosed and repaired a faulty alternator, bad battery, starter motor, coolant leak, and power steering leak. After hitting black ice and curbing the front passenger wheel, I replaced the control arm and tie rod myself. Additional work includes front and rear brake and rotor replacements, serpentine belt, radiator, and custom speaker install.",
+      technologies: ["Automotive Repair", "Diagnostics", "Maintenance", "Mechanical Systems"],
+      link: "",
+      images: [car],
       videoLink: ""
     },
+    {
+      title: "Custom MacBook Cooler - In Progress",
+      type: ["Hardware"],
+      description: "Built a custom laptop cooling dock in 45 minutes instead of buying one. It looks terrible and works perfectly.",
+      detailedDescription: "Summer 2023, MacBook Pro thermal throttling mid-Minecraft session. Instead of waiting two days and spending twenty dollars on a cooling pad, I built one in 45 minutes from two PC fans, a power adapter, and a switch. Positioned the fans directly under the CPU and GPU. Went from 30-60 FPS to a steady 200+ FPS — over 3x performance improvement. I have used it every day since. The prototype is ugly. I am currently redesigning it: rubber mounts for vibration dampening, tighter form factor, and actual aesthetics. The first version solved the problem. The second version will solve it properly.",
+      technologies: ["Hardware", "Mechanical Design", "3D Printing", "Cooling Solutions"],
+      link: "",
+      images: [nomac, sidemac, withmac, cadnew],
+      videoLink: ""
+    },
+    {
+      title: "Mastermind",
+      type: ["Hardware", "Software", "Networking", "Group"],
+      description: "An AI-powered, IoT-based poker assistant that uses smart glasses, real-time object detection, and a mobile app to provide strategic gameplay advice to new players.",
+      detailedDescription: "Mastermind is a real time intelligent poker assistant that uses a wearable Raspberry Pi camera system embedded in 3D printed glasses to identify playing cards during live gameplay. The device streams video to a FastAPI inference server hosted on Google Cloud Platform, where a fine tuned YOLOv8 model detects the cards in view. These card values are then stored and synchronized using Firebase’s real time database and Firestore services. I developed the mobile application using React Native and Expo, building out the frontend layout and enabling real time interaction with the backend. The app allows users to view detected cards and receive poker strategy advice at each game stage (flop, turn, river), which is generated using structured queries to OpenAI's ChatGPT3.5 Turbo API. I also contributed to the project’s backend architecture by helping design the data flow between the Pi, inference server, Firebase, and app ensuring a responsive and secure experience through proper use of Firebase Authentication and cloud-based callbacks. This system showcases seamless integration between embedded vision, AI inference, real time data pipelines, and cross-platform app development, all structured to deliver actionable poker advice in an intuitive user interface.",
+      technologies: ["Machine learning", "YOLOv8", "Raspbery Pi", "Roboflow", "React Native", "Expo", "GCP", "FastAPI", "Websockets", "Firebase", "IoT"],
+      link: "",
+      images: [master],
+      videoLink: "https://www.youtube.com/embed/NuvCnjqJPv8"
+    },  
     {
       title: "IoT Thermostat",
       type: ["Hardware", "Software", "Networking", "Group"],
@@ -107,15 +163,6 @@ const projects = [
       videoLink: "https://www.youtube.com/embed/KwcwHzdf0r0"
     },
     {
-      title: "Custom Electric Longboard battery pack",
-      type: ["Hardware"],
-      description: "A custom battery pack for an Evolve electric longboard that uses 18650 cells configured to existing battery management system (BMS).",
-      technologies: ["Battery Design", "Circuit Analysis", "Voltage/Current Calculations", "BMS integration"],
-      link: "",
-      images: [LB1,LB2],
-      videoLink: "https://youtube.com/embed/wP0nA2YVpxA"
-    },
-    {
       title: "Ninja Cube",
       type: ["Software"],
       description: "A 3D third person parkour/shooter game. Using unique motion controls, players must dodge projectiles advancing through levels via parkour.",
@@ -125,25 +172,6 @@ const projects = [
       images: [NC1, NC2],
       videoLink: ""
     },
-    {
-      title: "Datamosher",
-      type: ["Software"],
-      description: "A Python algorithm interfacing with ffmpeg library to manipulate video encoding producing glitch art",
-      detailedDescription: "This project uses the ffmpeg library to duplicate P-frames in video encoding (specifically H.264 AVC) producing glitch art. The algorithm reads the video file and randomly selects frames to manipulate, creating a unique visual effect. The project is designed to be run from the command line and is easily customizable to create a variety of glitch art styles.",
-      technologies: ["Python", "ffmpeg"],
-      link: "https://github.com/ZakMin11/Datamosher/tree/main",
-      images: [],
-      videoLink: ""
-    },
-    {
-      title: "Taxi Data Collection Automation",
-      type: ["Software"],
-      description: "A Python script that automates the collection of taxi data",
-      detailedDescription: "This project uses the Pandas library to automate the collection of taxi data from thousands of images as a data collection campaign for Firefly. The script uses the OpenCV library to read the images and extract the data, which is then stored in a CSV file for further analysis saving hours of manual data entry.",
-      technologies: ["Python", "Pandas", "Data Analysis"],
-      link: "https://github.com/ZakMin11/Taxi-Data-Collection-Automation",
-      images: [],
-      videoLink: ""
-    }
+    
   ];
   export default projects;
